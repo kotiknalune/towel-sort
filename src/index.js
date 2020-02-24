@@ -1,6 +1,19 @@
+module.exports = function towelSort(matrix) {
 
-// You should implement your task here.
+    if (matrix && matrix.length) {
+        let sortedArray = [];
+        for (let i = 0; i < matrix.length; i++) {
+            let remainder = i % 2;
+            if (remainder != 0) {
+                matrix[i].reverse();
+            }
+        }
 
-module.exports = function towelSort (matrix) {
-  return [];
+        for (let key in matrix) sortedArray = sortedArray.concat(matrix[key]);
+        return sortedArray;
+
+    } else {
+        return [];
+    }
+
 }
